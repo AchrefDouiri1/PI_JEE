@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+<ui:include src="squelette.xhtml" />
+
+  <div class="row clearfix">
+                <div class="col-lg-12">
+	<h:form id="form">
+		<b>Events</b>
+
+
+	
+	<h:panelGroup columns="2">
+
+	
+
+	
+		
+
+			<h:dataTable value="#{tasksbean.lstask}" var="e"
+				border="1">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Name" />
+					</f:facet>
+					<h:outputText value="#{e.difficulteId}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Picture" />
+					</f:facet>
+					<h:outputText value="#{e.duration}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Theme" />
+					</f:facet>
+					<h:outputText value="#{e.nomtask}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Location" />
+					</f:facet>
+					<h:outputText value="#{e.projectId}" />
+				</h:column>
+								<h:column>
+					<f:facet name="header">
+						<h:outputText value="Location" />
+					</f:facet>
+					<h:outputText value="#{e.tasksId}" />
+				</h:column>				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Location" />
+					</f:facet>
+					<h:outputText value="#{e.team_memberId}" />
+				</h:column>
+				
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Action" />
+					</f:facet>
+					
+					<h:commandButton action="#{tasksbean.supprimer(e)}"
+						value="Delete" />
+					<h:commandButton action="#{tasksbean.Modifier(e)}"
+						value="Update" />
+						
+
+				
+
+
+				</h:column>
+
+				
+
+			</h:dataTable>
+		
+	</h:panelGroup>
+</h:form>   
+                </div>
+            </div>
+
+</body> 
+</html>
+
