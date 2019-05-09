@@ -51,7 +51,7 @@ public class ClientBean {
 				}
 			}
 			return listdata;
-	}
+		}
 		
 		public List<entities.Clients> getClientss() {
 			Clients=E.GetAll();

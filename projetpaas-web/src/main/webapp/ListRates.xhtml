@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<title>Rates</title>
+</h:head>
+<body>
+	<h:form>
+		<p:dataTable var="p" value="#{RateBean.Rates}">
+			<p:column headerText="member">
+				<h:outputText value="#{p.memberId}" />
+			</p:column>
+			
+			<p:column headerText="rate Value">
+				<h:outputText value="#{p.rateVal}" />
+			</p:column>
+			<p:column headerText="managerId">
+				<h:outputText value="#{p.managerId}" />
+			</p:column>
+			<p:column headerText="taskId">
+				<h:outputText value="#{p.taskId}" />
+			</p:column>			
+			<p:column headerText="rateId">
+				<h:outputText value="#{p.rateId}" />
+			</p:column>			
+		</p:dataTable>
+	</h:form>
+</body>
+
+</html>

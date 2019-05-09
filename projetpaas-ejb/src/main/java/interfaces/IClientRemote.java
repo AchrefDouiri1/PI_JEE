@@ -8,6 +8,7 @@ import entities.Clients;
 
 @Remote
 public interface IClientRemote {
+	
 	List<Clients> GetAll();
 	public void Delete(Clients EventId);
 	public void Create(Clients p);
